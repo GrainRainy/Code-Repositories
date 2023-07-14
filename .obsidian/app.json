@@ -1,0 +1,9 @@
+{
+  "livePreview": false,
+  "showLineNumber": true,
+  "spellcheck": true,
+  "autoPairBrackets": false,
+  "promptDelete": false,
+  "attachmentFolderPath": "./",
+  "newFileLocation": "current"
+}

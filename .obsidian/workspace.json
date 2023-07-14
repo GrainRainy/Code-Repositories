@@ -1,0 +1,153 @@
+{
+  "main": {
+    "id": "586bfbd55edef846",
+    "type": "split",
+    "children": [
+      {
+        "id": "53a3c332b617ea4c",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "7798f6819dafe45b",
+            "type": "leaf",
+            "state": {
+              "type": "empty",
+              "state": {}
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "50bb224d20c39745",
+    "type": "split",
+    "children": [
+      {
+        "id": "a5eb531361459789",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "bdc269dc929b3c60",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "fbeaf04c816c1d08",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "702396196ef5d019",
+            "type": "leaf",
+            "state": {
+              "type": "starred",
+              "state": {}
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 262.5
+  },
+  "right": {
+    "id": "0abf6f813e315a6d",
+    "type": "split",
+    "children": [
+      {
+        "id": "b0a177ea27087a24",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "1126918c6534ed59",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "700d2a7e05202574",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "6281fdf02bc7db00",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true
+              }
+            }
+          },
+          {
+            "id": "2c0a8c835baeabd4",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {}
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 200
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:打开快速切换": false,
+      "graph:查看关系图谱": false,
+      "canvas:Create new canvas": false,
+      "daily-notes:打开/创建今天的日记": false,
+      "templates:插入模板": false,
+      "command-palette:打开命令面板": false
+    }
+  },
+  "active": "7798f6819dafe45b",
+  "lastOpenFiles": [
+    "基础算法模板 & 笔记/2022.12.31随笔 - 我们的2022.md",
+    "2023-01-01.md",
+    "基础算法模板 & 笔记/2022.10.14 - DFS与BFS.md",
+    "基础算法模板 & 笔记/2022.10.29 - 树与图的存储和遍历.md",
+    "基础算法模板 & 笔记/2022.10.13 - 动态规划.md",
+    "基础算法模板 & 笔记/2022.12.21 - 贪心.md",
+    "基础算法模板 & 笔记/2022.12.25 - 哈夫曼树.md",
+    "基础算法模板 & 笔记/2022.10.6 - 区间合并.md",
+    "基础算法模板 & 笔记/2022.10.6 - 链表.md",
+    "基础算法模板 & 笔记/2022.11.15 - STL容器进阶.md"
+  ]
+}

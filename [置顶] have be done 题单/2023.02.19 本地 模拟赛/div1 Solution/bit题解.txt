@@ -1,0 +1,171 @@
+[题意简述]
+
+  在一张N*M的网格中，每一点都可以为黑色或白色。要求求出每一点与近一个白色点的曼哈顿距离。
+
+[分析]
+
+  刚看到题目，我便想到一个最简单的算法：对于每一个黑色点，用广度优先搜索寻找与其最相近的白点，再求距离；对于白色点，与其最相近的白点就是本身，因此距离为0。
+
+  很明显这样的算法是会超时的。于是，我就考虑另一种算法：从白色点出发搜索黑色点。
+
+具体做法是：用一个二维数组Ans[i,j]，记录点i,j 与与其最相近的白点的曼哈顿距离。
+
+　　　　　　白点Ans初值为０，黑点为∞。
+
+　　　　　　接下来从每个白色点出发，向四周搜索黑色点。当Ans[黑点]>当前白点到此黑点的距离　时更新黑色点的Ans。
+
+另外，题目给定的数据范围是N*M<=182^2，但是并不一定N<=182且M<=182，因此，数组应开大一些。
+
+　[参考代码]
+
+program pixel;
+
+ const　Drt:array[1..4,1..2]of integer=((+1,0),(0,+1)
+
+,(-1,0),(0,-1));
+
+ var Map:array[1..2000,1..2000]of boolean;
+
+     Open:array[1..350000,1..2]of longint;
+
+     Ans:Array[1..2000,1..2000]of longint;
+
+     n,m,i,j:longint;
+
+     tmp:char;
+
+ 
+
+function Dis(const x1,y1,x2,y2:longint):longint;
+
+begin
+
+  exit(abs(x1-x2)+abs(y1-y2));
+
+end;
+
+ 
+
+procedure Search(const x,y:longint);
+
+ var h,t,i,x1,y1,k:longint;
+
+begin
+
+  h:=0;
+
+  t:=1;
+
+  Open[1,1]:=x;
+
+  Open[1,2]:=y;
+
+  repeat
+
+    inc(h);
+
+    for i:=1 to 4 do
+
+    begin
+
+      x1:=Open[h,1]+Drt[i,1];
+
+      y1:=Open[h,2]+Drt[i,2];
+
+      k:=Dis(x,y,x1,y1);
+
+      if(x1>0)and(x1<=n)and(y1>0)and(y1<=m)and(Ans[x1,y1]>k) then
+
+      begin
+
+        inc(t);
+
+        Open[t,1]:=x1;
+
+        Open[t,2]:=y1;
+
+        Ans[x1,y1]:=k;
+
+      end;
+
+    end;
+
+  until h>t;
+
+end;
+
+ 
+
+begin
+
+  readln(n,m);
+
+  for i:=1 to n do
+
+  begin
+
+    for j:=1 to m do
+
+    begin
+
+      read(tmp);
+
+      if tmp='0' then
+
+      begin
+
+        Ans[i,j]:=maxlongint;
+
+        Map[i,j]:=false;
+
+      end
+
+      else begin
+
+        Ans[i,j]:=0;
+
+        Map[i,j]:=true;
+
+      end;
+
+    end;
+
+    readln;
+
+  end;
+
+  for i:=1 to n do
+
+    for j:=1 to m do
+
+    begin
+
+      if Map[i,j] then
+
+      begin
+
+        Search(i,j);
+
+      end;
+
+    end;
+
+  for i:=1 to n do
+
+  begin
+
+    write(Ans[i,1]);
+
+    for j:=2 to m do
+
+    begin
+
+       write(' ',Ans[i,j]);
+
+    end;
+
+    writeln;
+
+  end;
+
+end.
