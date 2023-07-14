@@ -17,11 +17,11 @@ using namespace std;
 using LL = long long;
 const int N = 2.5e3 + 10;
 const int M = 1e4 + 10;
-int n, m, k, w[N];
+int n, m, k;
 int head[N], idx;
 struct Node { int nxt, to; }edge[M << 1];
 int path[N];
-LL ans;
+LL ans, w[N];
 
 inline void add(int a, int b) {
 	edge[++ idx].nxt = head[a];
