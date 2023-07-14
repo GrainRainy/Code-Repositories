@@ -1,0 +1,8 @@
+.vscode/
+.obsidian/
+.trash/
+.gitinore
+*.html
+icon/
+Temp/
+desktop.ini
