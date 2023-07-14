@@ -4,7 +4,7 @@ date: 2023-1-31 23:46:32
 categories: 字符串
 tags: 字符串
 author: GrainRain
-cover: https://pic.imgdb.cn/item/63d936c3e90d1c00984bb396.jpg
+cover: https://pic.imgdb.cn/item/64b015881ddac507cc8ec225.png
 single_column: true
 ---
 
