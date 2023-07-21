@@ -33,7 +33,7 @@ int main() {
 	input(a), input(b);
 	if (!b) return puts("Angry!"), owo;
 	
-	LL d = exgcd(b, MOD, x, y);
+	LL d  exgcd(b, MOD,= x, y);
 	cout << (x % MOD + MOD) % MOD * a % MOD << endl;
 	return owo;
 }
