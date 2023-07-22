@@ -1,10 +1,4 @@
 #include <bits/stdc++.h>
-#define endl '\n'
-#define fi first
-#define se second
-#define DEBUG cerr << "-- DEBUG --\n";
-#define debug(x) cerr << #x << ' ' << x << endl;
-
 namespace IO {
 	#ifdef __LINUX__
 	#define getchar() getchar_unlocked()
@@ -16,13 +10,12 @@ namespace IO {
 	#define putchar(a) _putchar_nolock()
 	#endif
 	template <typename T> inline void input(T &x) {
-		x = 0; char c = getchar(); bool f = false;
+		x = 0; char c = getchar();
+		bool f = false;
 		for (; !isdigit(c); c = getchar()) f |= (c == '-');
 		for (; isdigit(c); c = getchar()) x = x * 10 + (c ^ '0');
 		if (f) x = -x;
 	}
-	template <typename T, typename... Args> 
-	void input(T &x, Args&... args) { input(x), input(args...); }
 	template <typename T> inline void output(T x, char ed = '\n') {
 		if (x < 0) putchar('-'), x = -x;
 		static short st[20], top;
@@ -30,26 +23,28 @@ namespace IO {
 		while (top) putchar(st[top --] | '0');
 		putchar(ed);
 	}
-	template <typename T, typename ...Args>
-	void output(T x, char ch = ' ', Args... args) {
-		output(x, ch); output(args...);
-	}
-}
+} 
 
 using namespace IO;
 using namespace std;
 using LL = long long;
-using ULL = unsigned long long;
-using PII = pair<int, int>;
-using PLL = pair<LL, LL>;
-
-
-void solve() {
-	
-}
+const int N = 1e6 + 10;
+int n, k, step[N], tmp[N], ans[N];
+LL m, pos[N];
 
 int main() {
-	int t; input(t);
-	while (t -- ) solve();
+	input(n), input(k), input(m);
+	for (int i = 1; i <= n; ++ i) input(pos[i]), ans[i] = i;
+	for (int i = 1, l = 1, r = k + 1; i <= n; ++ i) {
+		while (r < n and pos[r + 1] - pos[i] < pos[i] - pos[l]) l ++, r ++;
+		step[i] = pos[r] - pos[i] > pos[i] - pos[l] ? r : l;
+	}
+	while (m) {
+		if (m & 1) for (int i = 1; i <= n; ++ i) ans[i] = step[ans[i]];
+		memcpy(tmp, step, sizeof(int) * (n + 10));
+		for (int i = 1; i <= n; ++ i) step[i] = tmp[tmp[i]];
+		m >>= 1;
+	}
+	for (int i = 1; i <= n; ++ i) output(ans[i], " \n"[i == n]);
 	return 0;
-}
+} 
