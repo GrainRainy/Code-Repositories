@@ -509,21 +509,17 @@ int main() {
     int t; input(t);
     while (t --) {
 		int n; input(n);
-		for (int i = 0, j = 0; i < n; i ++) {
-			double x1, x2, y1, y2;
-			cin >> x1 >> y1 >> x2 >> y2;
-			seg[j ++] = { x1, y1, y2, 1 };
-			seg[j ++] = { x2, y1, y2, -1 };
-			lis.push_back(y1), lis.push_back(y2);
-	}
-
+        for (int i = 0, j = 0; i < n; i ++) {
+            double x1, x2, y1, y2;
+            cin >> x1 >> y1 >> x2 >> y2;
+            seg[j ++] = { x1, y1, y2, 1 };
+            seg[j ++] = { x2, y1, y2, -1 };
+            lis.push_back(y1), lis.push_back(y2);
+        }
         sort(lis.begin(), lis.end());
-        lis.erase(unique(lis.begin(), lis.end()), lis.end());
-		// 离散化
-
+        lis.erase(unique(lis.begin(), lis.end()), lis.end()); // 离散化
         sort(seg, seg + (n << 1));
         build(1, 0, lis.size() - 2); // 建树
-
         double ans = 0;
         for (int i = 0; i < (n << 1); i ++) {
             if (i > 0) ans += len(1) * (seg[i].x - seg[i - 1].x);
