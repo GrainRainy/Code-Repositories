@@ -4,6 +4,8 @@ Collecting precious memories of oi life.
 
 ## # 查找索引
 
+本仓库所有文件均按以下规则命名, 方便按题目编号查找文件. 
+
 ### 按题目类型分
 
 #### 1. 练习题
