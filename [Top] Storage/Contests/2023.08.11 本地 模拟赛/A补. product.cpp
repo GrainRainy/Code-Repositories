@@ -9,10 +9,12 @@ namespace IO {
 
 using IO::input;
 using namespace std;
+using LL = long long;
 const int N = 1e3 + 10;
-int n, sd[N], st[N], f[N][N];
+int n;
+LL sd[N], st[N], f[N][N];
 
-inline void upd(int &x, int y) { (x > y) and (x = y); }
+inline void upd(LL &x, LL y) { (x > y) and (x = y); }
 
 int main() {
     input(n);
@@ -22,13 +24,15 @@ int main() {
         f[i][i] = st[i] * sd[i];
         st[i] += st[i - 1];
         sd[i] += sd[i - 1];
+        f[i][i - 1] = 0;
     }
+    f[n + 1][n] = 0;
     for (int len = 2; len <= n; ++ len) {
         for (int l = 1, r; l + len - 1 <= n; ++ l) {
             r = l + len - 1;
-            for (int mid = l + 1; mid < r; ++ mid)
+            for (int mid = l; mid <= r; ++ mid)
                 upd(f[l][r], f[l][mid - 1] + f[mid + 1][r]
-                            + (st[mid - 1] - st[l - 1]) * (sd[r] - sd[mid - 1])
+                            + (st[mid - 1] - st[l - 1]) * (sd[r] - sd[mid])
                             + (st[r] - st[l - 1]) * (sd[mid] - sd[mid - 1]));
         }
     }
