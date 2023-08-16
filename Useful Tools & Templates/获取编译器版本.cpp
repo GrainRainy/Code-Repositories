@@ -24,6 +24,5 @@ int main() {
     #endif
 
 	cout << true_cxx_ver << endl;
-	
 	return 0;
 }

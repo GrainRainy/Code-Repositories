@@ -3,12 +3,9 @@
 #include <windows.h>
 #include <cstdlib>
 #include <ctime>
-
-#define n 50
-
 using namespace std;
 int main(){
-    int ok = 0;
+    int n = 50, ok = 0;
     for (int i = 1; i <= n; ++i){
         system("make.exe > make.txt");
         system("mysol.exe < make.txt > mysol.txt");
@@ -17,14 +14,12 @@ int main(){
         double end = clock();
 
         double t = (end - begin);
-        if (system("fc mysol.txt std.txt")){
+        if (system("fc mysol.txt std.txt")) {
             printf("Test#%d Wrong Answer\n", i);
             return 0;
-        }
-        else if (t > 1000){
+        } else if (t > 1000) {
             printf("Test#%d Time Limited Exceeded with Time %.0lfms\n", i, t);
-        }
-        else{
+        } else {
             printf("Test#%d Accepted with time %.0lfms\n", i, t);
             ok ++;
         }
@@ -32,5 +27,6 @@ int main(){
     printf("\n");
     printf("AC %d Tests out of %d Tests in totle\n", ok, n);
     Sleep(1000);
+    return 0;
 }
 
