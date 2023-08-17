@@ -77,3 +77,9 @@ INPUT<int> input;
 /* µ÷ÓÃÊ± */
 a = input();
 ```
+
+## fread
+
+const int L=1<<22;
+char buf[L],*S,*T,pbuf[L],*P=pbuf;
+#define getchar() (S==T&&(S=buf)==(T=buf+fread(buf,1,L,stdin)))?EOF:*S++;
