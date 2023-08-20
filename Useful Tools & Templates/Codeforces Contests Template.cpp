@@ -20,10 +20,10 @@ namespace IO {
 		if (f) x = -x;
 	}
 	template <typename T, typename... Args> 
-	void rt(T &x, Args&... args) { rd(x), rd(args...); }
+	void rd(T &x, Args&... args) { rd(x), rd(args...); }
 	template <typename T> inline void ot(T x, char ed = '\n') {
 		if (x < 0) putchar('-'), x = -x;
-		static short st[20], top;
+		static short st[30], top;
 		do st[++ top] = x % 10, x /= 10; while (x);
 		while (top) putchar(st[top --] | '0');
 		putchar(ed);
