@@ -1,7 +1,7 @@
 ---
 title: Trie树 | 学习笔记
 date: 2022-11-11 16:14:20
-categories: 数据结构
+categories: 字符串
 tags: 学习笔记
 author: GrainRain
 cover: https://pic.imgdb.cn/item/63ba9a88be43e0d30e07c512.jpg
@@ -144,7 +144,7 @@ void insert(int u) {
 
 #### 简化题意
 
-给定两个数组 $\rm \left \{A \right \}, \left \{B \right \}$, 定义 $\rm C_i = A_i\ xor\ B_i$. 要求重排两个序列使得 $\rm \left \{C \right \}$ 的字典序最小. $n \leqslant 10^5, a_i, b_i \leqslant 2^{30}$. 
+给定两个数组 $\rm \{A \}, \{B \}$, 定义 $\rm C_i = A_i\ xor\ B_i$. 要求重排两个序列使得 $\rm \{C \}$ 的字典序最小. $n \leqslant 10^5, a_i, b_i \leqslant 2^{30}$. 
 
 #### $Solutions$
 
