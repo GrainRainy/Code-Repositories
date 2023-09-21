@@ -36,7 +36,7 @@ int qpow(LL a, LL b) {
 
 int find(int x) { return x == fa[x] ? x : fa[x] = find(fa[x]); }
 void solve() {
-	rd(n), rd(s); mp.clean(), ans = 1;
+	rd(n), rd(s); mp.clear(), ans = 1;
 	for (int i = 1; i < n; ++ i) {
 		fa[i] = i, siz[i] = 1;
 		rd(e[i].a), rd(e[i].b), rd(e[i].w);
