@@ -52,6 +52,6 @@ void solve() {
 
 int main() {
 	int t; rd(t);
-	while (t -- ) solve();
+	while (t --) solve();
 	return 0;
 }
