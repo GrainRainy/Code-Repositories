@@ -8,7 +8,7 @@
 
 - 最优化问题中多算一些不可能成为最优解的东西能保证正确性, 而且可能更加好算 [CF1473E](https://codeforces.com/problemset/problem/1473/E)
 
-- 代表元计数: 去重的一种方案是规定某种方案被统计上当且仅当它具有某种属性, 例如最靠前 / 字典序最小, 可以将问题转化为对不存在变换方式使得该方案更靠前 / 字典序更小 的方案计数. [CF1679F](https://codeforces.com/problemset/problem/1679/F)
+- 代表元计数: 去重的一种方案是规定某种方案被统计上当且仅当它具有某种属性, 例如最靠前 / 字典序最小, 可以将问题转化为对不存在变换方式使得该方案更靠前 / 字典序更小 的方案计数. [CF1679F](https://codeforces.com/problemset/problem/1679/F) [CF1548E](https://codeforces.com/problemset/problem/1548/E)
 
 - 数据范围小的题目考虑枚举什么是很重要的. 
 
